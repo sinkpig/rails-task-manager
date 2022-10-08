@@ -1,0 +1,7 @@
+<h1 style="display: inline-block;"> <%= @task.title %> </h1>
+<%= link_to "Edit", edit_path %>
+<p> <%= @task.details %> </p>
+<input type="checkbox" id="<%= @task.title + @task.id.to_s %>" name="<%= @task.title + @task.id.to_s %>" value="Task" <%= "checked" if @task.completed %>>
+<label for="<%= @task.title + @task.id.to_s %>"> <%= @task.completed ? "Completed" : "Not completed" %> </label><br><br>
+<hr>
+<%= link_to "Go back to list", index_path %>
